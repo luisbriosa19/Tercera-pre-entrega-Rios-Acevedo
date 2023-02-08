@@ -1,0 +1,19 @@
+{% extends "AppCoder/padre.html" %} 
+{% load static %}
+
+{% block titulo %}
+REGISTRO DE DEPORTES.
+{% endblock %}
+
+{% block descripcion %} 
+“No te puedes poner ningún límite. No hay nada imposible”. Usain Bolt
+{% endblock %} 
+
+{% block formulario %}
+    <form action="" method="POST"> {% csrf_token %}
+        <table>
+            {{formDeportes1.as_table}}
+        </table>
+        <input type="submit" value="Enviar">
+    </form>
+{% endblock %}

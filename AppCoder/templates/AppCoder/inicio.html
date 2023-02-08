@@ -1,0 +1,23 @@
+{% extends "AppCoder/padre.html" %} 
+{% load static %}
+
+{% block titulo %}
+CENTRO DEPORTIVO PALERMO.
+{% endblock %}
+
+{% block descripcion %} 
+“La mayoría de las personas se rinden justo cuando están a punto de alcanzar el éxito. Lo dejan cuando les falta un metro para llegar a la meta. Se rinden en el último minuto del partido, a un pie de conseguir el tanto que le daría la victoria.”
+Ross Perot
+{% endblock %} 
+
+{% block busqueda %}
+<form action="/AppCoder/resultado_deporte/" method="GET"> 
+    <input type="numero" placeholder ="Numero de Grupo" name="grupo" id="grupo" >    
+    <input type="submit" value="BUSCAR">
+</form>
+
+{% for deporte in deportes %}
+    <br>
+    <p> El número de grupo buscado es: {{deporte.grupo}}  y corresponde al deporte: {{deporte.nombre}}</p>
+{% endfor %}
+{% endblock %}

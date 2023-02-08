@@ -1,0 +1,20 @@
+{% extends "AppCoder/padre.html" %} 
+{% load static %}
+
+{% block titulo %}
+REGISTRO DE JUGADORES. 
+{% endblock %}
+
+{% block descripcion %} 
+“No puedes poner un límite a nada. Cuanto más sueñas, más lejos llegas.-Michael Phelps.
+{% endblock %} 
+
+{% block formulario %}
+    <form action="" method="POST"> {% csrf_token %}
+        <table>
+            {{formjugadores1.as_table}}
+        </table>
+        <input type="submit" value="Enviar">
+    </form>
+{% endblock %}
+

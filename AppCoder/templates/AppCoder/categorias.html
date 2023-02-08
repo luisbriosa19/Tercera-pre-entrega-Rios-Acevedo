@@ -1,0 +1,19 @@
+{% extends "AppCoder/padre.html" %} 
+{% load static %}
+
+{% block titulo %}
+REGISTRO DE CATEGORIAS.
+{% endblock %}
+
+{% block descripcion %} 
+Tan solo juega, diviértete, disfruta del juego.- Michael Jordan.
+{% endblock %} 
+
+{% block formulario %}
+    <form action="" method="POST"> {% csrf_token %}
+        <table>
+            {{formCategorias1.as_table}}
+        </table>
+        <input type="submit" value="Enviar">
+    </form>
+{% endblock %}

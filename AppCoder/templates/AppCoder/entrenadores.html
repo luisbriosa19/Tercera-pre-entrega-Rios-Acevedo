@@ -1,0 +1,19 @@
+{% extends "AppCoder/padre.html" %} 
+{% load static %}
+
+{% block titulo %}
+REGISTRO DE ENTRENADORES.
+{% endblock %}
+
+{% block descripcion %} 
+“El talento depende de la inspiración, pero el esfuerzo de cada uno”. Pep Guardiola.
+{% endblock %} 
+
+{% block formulario %}
+    <form action="" method="POST"> {% csrf_token %}
+        <table>
+            {{formentrenadores1.as_table}}
+        </table>
+        <input type="submit" value="Enviar">
+    </form>
+{% endblock %}

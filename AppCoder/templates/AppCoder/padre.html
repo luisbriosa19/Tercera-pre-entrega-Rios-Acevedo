@@ -1,0 +1,130 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>CENTRO DEPORTIVO PALERMO.</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="{% static 'AppCoder/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'AppCoder/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'AppCoder/css/aos.css' %}">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="{% static 'AppCoder/css/tooplate-gymso-style.css' %}">
+<!--
+Tooplate 2119 Gymso Fitness
+https://www.tooplate.com/view/2119-gymso-fitness
+-->
+</head>
+<body data-spy="scroll" data-target="#navbarNav" data-offset="50">
+
+    <!-- MENU BAR -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+
+            <a class="navbar-brand" href="{% url 'Inicio' %}" >INICIO</a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-lg-auto">
+                    
+                    <li class="nav-item">
+                        <a href="{% url 'Jugador' %}" class="nav-link smoothScroll">JUGADORES</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{% url 'Entrenador' %}" class="nav-link smoothScroll">ENTRENADORES</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{% url 'Deporte' %}" class="nav-link smoothScroll">DEPORTES</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{% url 'Categoria' %}" class="nav-link smoothScroll">CATEGORIAS</a>
+                    </li>
+                </ul>
+
+                <ul class="social-icon ml-lg-3">
+                    <li><a href="{% url 'Inicio' %}" class="fa fa-facebook"></a></li>
+                    <li><a href="{% url 'Inicio' %}" class="fa fa-twitter"></a></li>
+                    <li><a href="{% url 'Inicio' %}" class="fa fa-instagram"></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero d-flex flex-column justify-content-center align-items-center" id="home">
+            <div class="bg-overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-10 mx-auto col-12">
+                            <div class="hero-text mt-5 text-center">
+                                    <h1 class="text-white" data-aos="fade-up" data-aos-delay="500">
+                                        
+                                    {% block titulo %} 
+                                    {% endblock %} 
+                                    </h1>
+                                    <a href="#!" class="btn custom-btn bordered mt-3" data-aos="fade-up" data-aos-delay="700">
+
+                                    {% block formulario %}
+                                    {% endblock %}
+                                    {% block busqueda %}
+                                    {% endblock %}
+
+                                    </a>
+                                    <h6 class="hero-text mt-5 text-center" data-aos="fade-up" data-aos-delay="300">
+                                    {% block descripcion %} 
+                                    {% endblock %} 
+                                    </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </section>
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+
+                    <div class="ml-auto col-lg-4 col-md-5">
+                        <p class="copyright-text">Copyright &copy; 2023 Centro Deportivo Palermo.
+                        
+                        <br>Design: <a>Luis Bladimir Rios Acevedo.</a></p>
+                    </div>
+
+                    <div class="d-flex justify-content-center mx-auto col-lg-5 col-md-7 col-12">
+                        <p class="mr-4">
+                            <i class="fa fa-envelope-o mr-1"></i>
+                            <a>cdpalermo@gmail.com</a>
+                        </p>
+
+                        <p><i class="fa fa-phone mr-1"></i>011-6836-8598</p>
+                    </div>
+                    
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="{% static 'AppCoder/js/jquery.min.js' %}"></script>
+    <script src="{% static 'AppCoder/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'AppCoder/js/aos.js' %}"></script>
+    <script src="{% static 'AppCoder/js/smoothscroll.js' %}"></script>
+    <script src="{% static 'AppCoder/js/custom.js' %}"></script>
+
+</body>
+</html>
